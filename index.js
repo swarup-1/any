@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
     res.send("Welcome To The Home Page");
 })
 
+
 app.use("/", userRouter)
 app.use(authentication);
 app.use("/", KanbanRoutes)
@@ -26,5 +27,4 @@ app.listen(8080, async () => {
     catch (err) {
         console.log(err.message)
     }
-
 })
