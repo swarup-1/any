@@ -1,5 +1,5 @@
 {
-  "name": "kanban-backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,17 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/swarup-1/any.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/swarup-1/any/issues"
-  },
-  "homepage": "https://github.com/swarup-1/any#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
