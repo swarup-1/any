@@ -17,8 +17,8 @@ app.use("/", userRouter)
 app.use(authentication);
 app.use("/", KanbanRoutes)
 
-app.listen(process.env.PORT, async () => {
-    console.log(`The app should be runing in ${process.env.PORT}`);
+app.listen(8080, async () => {
+    console.log(`The app should be runing in ${8080}`);
     try {
         await connection;
         console.log("DB is connected");
