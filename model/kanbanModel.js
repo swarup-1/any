@@ -3,7 +3,7 @@ const boardSchema = mongoose.Schema(
     {
         name: String,
         tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
-        user:String
+        user: mongoose.Schema.Types.Mixed
     }, {
     versionKey: false
 }
