@@ -14,9 +14,10 @@ KanbanRoutes.get("/getall", async (req, res) => {
 })
 
 KanbanRoutes.get("/getboard", async (req, res) => {
-  
+  let userID = req.body.user
+  console.log('userID:', userID)
   try {
-    let data = await BoardModel.find({user:req.query}).populate(["tasks", { path: "tasks", populate: { path: 'subtask' } }])
+    let data = await BoardModel.find({user:userID}).populate(["tasks", { path: "tasks", populate: { path: 'subtask' } }])
     // let data = await BoardModel.find()
     res.status(200).send(data)
   } catch (err) {
@@ -26,7 +27,6 @@ KanbanRoutes.get("/getboard", async (req, res) => {
 
 // ------------------------POST Routes---------------------------------------
 KanbanRoutes.post("/addboard", async (req, res) => {
-  // const {name}= req.body
   console.log(req.body);
   try {
     let data = await new BoardModel(req.body)
